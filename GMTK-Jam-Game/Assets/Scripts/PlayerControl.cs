@@ -6,12 +6,12 @@ public class PlayerControl : MonoBehaviour
 {
     //public WeaponScript weapon;
 
+    public bool playerOne;
     public bool CanAttack { get; set; }
     public bool CanMove { get; set; }
 
     //private Player_Attack player_Attack;
     private PlayerMovement playerMovement;
-    //private Player_Healing player_Healing;
 
     // Start is called before the first frame update
     void Start()
@@ -34,20 +34,17 @@ public class PlayerControl : MonoBehaviour
 
     void MovementInput()
     {
-        if (CanMove)
+        if (playerOne)
         {
-            playerMovement.HandleMove(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"), Input.GetButtonDown("Dash"));
+            playerMovement.HandleMove(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+        }
+        else
+        {
+            playerMovement.HandleMove(Input.GetAxisRaw("HorizontalTwo"), Input.GetAxisRaw("VerticalTwo"));
         }
     }
 
-    /*void HealingInput()
-    {
-        if (Input.GetButtonDown("Heal"))
-        {
-            player_Healing.HandleHeal();
-        }
-    }
-
+    /*
     void MeleeAttackInput()
     {
         if (Input.GetButtonDown("MeleeStrike") && CanAttack)

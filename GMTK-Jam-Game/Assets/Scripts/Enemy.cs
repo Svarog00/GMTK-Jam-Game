@@ -13,17 +13,13 @@ public abstract class Enemy : MonoBehaviour, IDamagable
     private float _curStunTime = 0f;
     private bool _canMove = true;
     [SerializeField] private EnemyStates currentState;
-
-    [Header("Spawn settings")]
-    protected ObjectPool _objectPool;
+    [SerializeField] private SlimeType _slimeType;
 
     [Header("Player relation")]
     public LayerMask layerMask;
     private bool playerDetected;
     private Transform center;
-    protected Player_Health playerHP;
     protected GameObject Player;
-    [SerializeField] private int weight = 0; //количество слотов, которые будут заниматься противником при атаке по игроку
 
     public float attackDistance; //Дистанция на которой может совершить атаку
     public float agressionDistance; //Дистанция на которой происходит агр
@@ -68,10 +64,6 @@ public abstract class Enemy : MonoBehaviour, IDamagable
     void OnEnable()
     {
         _hp = _hpMax;
-        if(_objectPool == null)
-        {
-            _objectPool = GetComponentInParent<ObjectPool>();
-        }
     }
 
     // Update is called once per frame
@@ -115,12 +107,12 @@ public abstract class Enemy : MonoBehaviour, IDamagable
         Collider2D[] detectedEnemies = Physics2D.OverlapCircleAll(center.position, agressionDistance, layerMask); //find the player in circle
         foreach (Collider2D enemy in detectedEnemies)
         {
-            if (enemy.tag == "Player" && !playerDetected) //если произошел агр, то заполняем ссылки на игрока
+            if (((enemy.tag == "BlueSlime" && _slimeType == SlimeType.Blue) || (enemy.tag == "RedSlime" && _slimeType == SlimeType.Red))
+                && !playerDetected) //если произошел агр, то заполняем ссылки на игрока
             {
                 if (Player == null)
                 {
                     Player = enemy.gameObject;
-                    playerHP = Player.GetComponent<Player_Health>();
                     playerPosition = Player.GetComponent<Rigidbody2D>();
                 }
                 currentState = EnemyStates.Chasing;
@@ -191,12 +183,6 @@ public abstract class Enemy : MonoBehaviour, IDamagable
         if (_distanceToPlayer <= attackDistance) //Если игрок слишком близко, то остановиться для атаки
         {
             _currentSpeed = 0f;
-
-            if (!_canAttack && playerHP.FreeSlots > weight) //Если игрока атакует не слишком много противников, то можно атаковать
-            {
-                _canAttack = true;
-                playerHP.FreeSlots -= weight;
-            }
             if (chill <= 0 && _canAttack) //Если является атакующим и паузка кончилась, то атака
             {
                 Attack();
@@ -215,7 +201,6 @@ public abstract class Enemy : MonoBehaviour, IDamagable
         if (_canAttack)
         {
             _canAttack = false;
-            playerHP.RestoreSlots(weight);
         }
     }
 
@@ -234,10 +219,7 @@ public abstract class Enemy : MonoBehaviour, IDamagable
         {
             FindObjectOfType<AudioManager>().Play(this.ToString());
             Leave(); //Don't touch the player
-
-            if (_objectPool != null)
-                _objectPool.AddToPool(this.gameObject);
-            else Destroy(gameObject, 0.5f);
+            gameObject.SetActive(false);
         }
     }
 
