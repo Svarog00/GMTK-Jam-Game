@@ -6,6 +6,9 @@ public class DoorScript : MonoBehaviour
 {
     [SerializeField] private MonoButtonScript _activatorButton;
     [SerializeField] private SlimeType _activatorButtonType;
+
+    private bool _doOpen;
+
     private BoxCollider2D _boxCollider;
     private Animator _animator;
 

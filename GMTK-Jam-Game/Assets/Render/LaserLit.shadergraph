@@ -2813,7 +2813,7 @@
     "m_Guid": {
         "m_GuidSerialized": "c28460d6-7e59-48a8-abdd-a4df5ca977e4"
     },
-    "m_Name": "Color",
+    "m_Name": "_Color",
     "m_DefaultReferenceName": "Color_ed47185c0a4f49beb7a4ce8353d8287c",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,

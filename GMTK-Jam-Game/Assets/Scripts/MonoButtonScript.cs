@@ -12,6 +12,10 @@ public class MonoButtonScript : MonoBehaviour
     {
         public SlimeType senderType;
     }
+
+    [SerializeField] private bool openDoorRed;
+    [SerializeField] private bool openDoorBlue;
+
     private SlimeType _buttonType;
     private Animator _animator;
 
