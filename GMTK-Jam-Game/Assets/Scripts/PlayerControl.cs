@@ -47,13 +47,16 @@ public class PlayerControl : MonoBehaviour
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
 
+        float x2 = Input.GetAxisRaw("HorizontalTwo");
+        float y2 = Input.GetAxisRaw("VerticalTwo");
+
         if (playerOne)
         {
             playerOneMovement.HandleMove(x, y);
         }
         else
         {
-            playerTwoMovement.HandleMove(x, y);
+            playerTwoMovement.HandleMove(x2, y2);
         }
     }
 
