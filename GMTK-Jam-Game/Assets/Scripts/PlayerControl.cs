@@ -56,7 +56,7 @@ public class PlayerControl : MonoBehaviour
         }
         else
         {
-            playerTwoMovement.HandleMove(x2, y2);
+            playerTwoMovement.HandleMove(x, y);
         }
     }
 
