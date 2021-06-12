@@ -12,7 +12,7 @@ public class ExitScripy : MonoBehaviour
     {
         if(slimeCount == 2)
         {
-            SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().handle + 1);
+            SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 
@@ -21,6 +21,14 @@ public class ExitScripy : MonoBehaviour
         if(collision.CompareTag("BlueSlime") || collision.CompareTag("RedSlime"))
         {
             slimeCount++;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("BlueSlime") || collision.CompareTag("RedSlime"))
+        {
+            slimeCount--;
         }
     }
 }

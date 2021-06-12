@@ -12,18 +12,17 @@ public class DoorScript : MonoBehaviour
     void Start()
     {
         _activatorButton.OnButtonActivated += ActivatorButton_OnButtonActivated;
-        _boxCollider.GetComponent<BoxCollider2D>();
+        _boxCollider = GetComponent<BoxCollider2D>();
     }
 
     private void ActivatorButton_OnButtonActivated(object sender, MonoButtonScript.OnButtonActivatedEventArgs e)
     {
         if(e.senderType == _activatorButtonType)
         {
+            Debug.Log($"Door opened {_activatorButtonType} & {this.ToString()}");
             Open();
         }
     }
-
-
 
     private void Open()
     {

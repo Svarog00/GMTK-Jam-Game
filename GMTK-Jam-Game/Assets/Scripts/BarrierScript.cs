@@ -4,21 +4,21 @@ using UnityEngine;
 
 public class BarrierScript : MonoBehaviour
 {
-    [SerializeField] private SlimeType _buttonType;
+    [SerializeField] private SlimeType _slimeType;
     private BoxCollider2D _boxCollider;
 
     private void Start()
     {
-        _boxCollider.GetComponent<BoxCollider2D>();
+        _boxCollider = GetComponent<BoxCollider2D>();
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.CompareTag("BlueSlime") && _buttonType == SlimeType.Blue)
+        if (collision.gameObject.CompareTag("BlueSlime") && _slimeType == SlimeType.Blue)
         {
             _boxCollider.isTrigger = true;
         }
-        else if(collision.CompareTag("RedSlime") && _buttonType == SlimeType.Red)
+        else if (collision.gameObject.CompareTag("RedSlime") && _slimeType == SlimeType.Red)
         {
             _boxCollider.isTrigger = true;
         }
@@ -26,11 +26,11 @@ public class BarrierScript : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.CompareTag("BlueSlime") && _buttonType == SlimeType.Blue)
+        if (collision.CompareTag("BlueSlime") && _slimeType == SlimeType.Blue)
         {
             _boxCollider.isTrigger = false;
         }
-        else if (collision.CompareTag("RedSlime") && _buttonType == SlimeType.Red)
+        else if (collision.CompareTag("RedSlime") && _slimeType == SlimeType.Red)
         {
             _boxCollider.isTrigger = false;
         }

@@ -6,17 +6,16 @@ public class PlayerControl : MonoBehaviour
 {
     //public WeaponScript weapon;
 
-    public bool playerOne;
     public bool CanAttack { get; set; }
     public bool CanMove { get; set; }
 
     //private Player_Attack player_Attack;
-    private PlayerMovement playerMovement;
-
+    [SerializeField] private bool playerOne = true;
+    [SerializeField] private PlayerMovement playerOneMovement;
+    [SerializeField] private PlayerMovement playerTwoMovement;
     // Start is called before the first frame update
     void Start()
     {
-        playerMovement = GetComponent<PlayerMovement>();
         //player_Healing = GetComponent<Player_Healing>();
         //player_Attack = GetComponent<Player_Attack>();
         CanAttack = true;
@@ -27,20 +26,34 @@ public class PlayerControl : MonoBehaviour
     void Update()
     {
         MovementInput();
+        SwitchSlimeInput();
         //HealingInput();
         //MeleeAttackInput();
         //GunAttackInput();
     }
 
+    void SwitchSlimeInput()
+    {
+        if(Input.GetButtonDown("Switch"))
+        {
+            playerOne = !playerOne;
+            playerOneMovement.HandleMove(0, 0);
+            playerTwoMovement.HandleMove(0, 0);
+        }
+    }
+
     void MovementInput()
     {
+        float x = Input.GetAxisRaw("Horizontal");
+        float y = Input.GetAxisRaw("Vertical");
+
         if (playerOne)
         {
-            playerMovement.HandleMove(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+            playerOneMovement.HandleMove(x, y);
         }
         else
         {
-            playerMovement.HandleMove(Input.GetAxisRaw("HorizontalTwo"), Input.GetAxisRaw("VerticalTwo"));
+            playerTwoMovement.HandleMove(x, y);
         }
     }
 

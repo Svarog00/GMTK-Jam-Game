@@ -12,13 +12,18 @@ public class MonoButtonScript : MonoBehaviour
     {
         public SlimeType senderType;
     }
-    [SerializeField] private SlimeType _buttonType;
-
+    private SlimeType _buttonType;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("BlueSlime") || collision.CompareTag("RedSlime"))
+        if (collision.CompareTag("BlueSlime"))
         {
+            _buttonType = SlimeType.Blue;
+            OnButtonActivated?.Invoke(this, new OnButtonActivatedEventArgs { senderType = _buttonType });
+        }
+        else if (collision.CompareTag("RedSlime"))
+        {
+            _buttonType = SlimeType.Red;
             OnButtonActivated?.Invoke(this, new OnButtonActivatedEventArgs { senderType = _buttonType });
         }
     }

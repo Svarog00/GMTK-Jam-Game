@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public Rigidbody2D rb2;
-    public Animator animator;
+    private Rigidbody2D rb2;
+    private Animator animator;
 
     public float movementSpeed = 5f;
 
@@ -33,33 +33,16 @@ public class PlayerMovement : MonoBehaviour
     public void HandleMove(float x, float y)
     {
         //Get input to move
-        /*_movement.x = Input.GetAxisRaw("Horizontal");
-        _movement.y = Input.GetAxisRaw("Vertical");*/
         _movement.x = x;
         _movement.y = y;
-
-       /* AnimateMove();
-
-        if (_movement != new Vector2(0, 0))
-        {
-            ChangeDir();
-        }*/
+        AnimateMove();
     }
 
 
-   /* private void AnimateMove()
+    private void AnimateMove()
     {
         animator.SetFloat("Horizontal", _movement.x);
         animator.SetFloat("Vertical", _movement.y);
         animator.SetFloat("Speed", _movement.sqrMagnitude);
     }
-
-    private void ChangeDir()
-    {
-        _direction = _movement;
-        animator.SetFloat("Dir_Horizontal", _direction.x);
-        animator.SetFloat("Dir_Vertical", _direction.y);
-    }*/
-
-
 }
