@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:GMTK-Jam-Game/Assets/Sprites/MainDoor.png.meta
 guid: 3334b8535f9ffee45a6bcc581ba3081c
+=======
+guid: c3edf2b24000f204188a19edf22a76b5
+>>>>>>> 033b95682013357099f4a23a19b7b9d095b0f454:GMTK-Jam-Game/Assets/Sprites/TileSet.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
