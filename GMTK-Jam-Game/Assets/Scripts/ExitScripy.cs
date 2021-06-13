@@ -51,7 +51,7 @@ public class ExitScripy : MonoBehaviour
     {
         foreach (GameObject gameObject in _slimes)
             gameObject.SetActive(false);
-        PlayerPrefs.SetInt(SceneManager.GetActiveScene().name, 1);
+        PlayerPrefs.SetInt(SceneManager.GetActiveScene().buildIndex.ToString(), 1);
         _animator.SetTrigger("Merge");
         FindObjectOfType<AudioManager>().Play("SlimesMerge");
         Invoke("Transit", 3f);
