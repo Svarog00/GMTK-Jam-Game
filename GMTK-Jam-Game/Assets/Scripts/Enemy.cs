@@ -181,11 +181,12 @@ public class Enemy : MonoBehaviour
 	protected void Attack() 
 	{
 		animator.SetTrigger("Attack");
-		Invoke("Damage", 1f);
+		Invoke("Damage", .8f);
 	}
 
 	void Damage()
     {
+		FindObjectOfType<AudioManager>().Play("GolemStrike");
 		Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(center.position, attackDistance, _playerLayer); //find the player in circle
 																											 //damage them
 		foreach (Collider2D enemy in hitEnemies)

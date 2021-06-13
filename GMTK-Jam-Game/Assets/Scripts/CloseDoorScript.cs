@@ -30,6 +30,7 @@ public class CloseDoorScript : MonoBehaviour
 
     private void Close()
     {
+        FindObjectOfType<AudioManager>().Play("Door");
         _animator.SetTrigger("Closed");
         Invoke("SetActiveFalse", 0.5f);
     }

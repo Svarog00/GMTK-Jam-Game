@@ -26,15 +26,16 @@ public class MonoButtonScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-
         if (collision.CompareTag("BlueSlime"))
         {
+            FindObjectOfType<AudioManager>().Play("ButtonActivated");
             _animator.SetTrigger("BlueStand");
             _buttonType = SlimeType.Blue;
             OnButtonActivated?.Invoke(this, new OnButtonActivatedEventArgs { senderType = _buttonType});
         }
         else if (collision.CompareTag("RedSlime"))
         {
+            FindObjectOfType<AudioManager>().Play("ButtonActivated");
             _animator.SetTrigger("RedStand");
             _buttonType = SlimeType.Red;
             OnButtonActivated?.Invoke(this, new OnButtonActivatedEventArgs { senderType = _buttonType });

@@ -29,6 +29,7 @@ public class DoorScript : MonoBehaviour
 
     private void Open()
     {
+        FindObjectOfType<AudioManager>().Play("Door");
         _animator.SetTrigger("Opened");
         Invoke("SetActiveFalse", 0.5f);
     }
