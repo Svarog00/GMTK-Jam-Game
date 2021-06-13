@@ -6,6 +6,7 @@ public class DoorScript : MonoBehaviour
 {
     [SerializeField] private MonoButtonScript _activatorButton;
     [SerializeField] private SlimeType _activatorButtonType;
+
     private BoxCollider2D _boxCollider;
     private Animator _animator;
 
@@ -28,7 +29,7 @@ public class DoorScript : MonoBehaviour
 
     private void Open()
     {
-        _boxCollider.isTrigger = true;
+        FindObjectOfType<AudioManager>().Play("Door");
         _animator.SetTrigger("Opened");
         Invoke("SetActiveFalse", 0.5f);
     }

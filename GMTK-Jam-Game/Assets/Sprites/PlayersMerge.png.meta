@@ -1,7 +1,64 @@
 fileFormatVersion: 2
-guid: 374b54da9012a174ea0f2979b03de963
+guid: 0723cd2865e3542449a031198ed2d442
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -2032685422361732416
+    second: PlayersMerge_0
+  - first:
+      213: -3791229676503946594
+    second: PlayersMerge_2
+  - first:
+      213: 1021515647111561509
+    second: PlayersMerge_8
+  - first:
+      213: 5395601068622026593
+    second: PlayersMerge_9
+  - first:
+      213: -7432606576555125611
+    second: PlayersMerge_10
+  - first:
+      213: 1197428388388768893
+    second: PlayersMerge_11
+  - first:
+      213: 3706707519705118819
+    second: PlayersMerge_12
+  - first:
+      213: -7664136288206512148
+    second: PlayersMerge_13
+  - first:
+      213: 273472413233138733
+    second: PlayersMerge_14
+  - first:
+      213: -3859506777689846633
+    second: PlayersMerge_15
+  - first:
+      213: -7570169607722025641
+    second: PlayersMerge_16
+  - first:
+      213: 1227180450808324235
+    second: PlayersMerge_17
+  - first:
+      213: 7448126650234114120
+    second: PlayersMerge_18
+  - first:
+      213: 3717372064396298179
+    second: PlayersMerge_19
+  - first:
+      213: -5223640315254577424
+    second: PlayersMerge_20
+  - first:
+      213: -3452875349547743
+    second: PlayersMerge_23
+  - first:
+      213: -8779022622996756813
+    second: PlayersMerge_24
+  - first:
+      213: -7362104288782137861
+    second: PlayersMerge_1
+  - first:
+      213: 7448961830223587074
+    second: PlayersMerge_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -32,7 +89,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -41,7 +98,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -68,7 +125,19 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -77,7 +146,406 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: PlayersMerge_0
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 6
+        width: 39
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ca9304c0637ac3e0800000000000000
+      internalID: -2032685422361732416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayersMerge_2
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 6
+        width: 40
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9a201e22b8d26bc0800000000000000
+      internalID: -3791229676503946594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayersMerge_8
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 6
+        width: 37
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 521869e91172d2e00800000000000000
+      internalID: 1021515647111561509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayersMerge_9
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 6
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1671fe4b59601ea40800000000000000
+      internalID: 5395601068622026593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayersMerge_10
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 6
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5941331c2b31ad890800000000000000
+      internalID: -7432606576555125611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayersMerge_11
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 6
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7c81e566ce1e9010800000000000000
+      internalID: 1197428388388768893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayersMerge_12
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 6
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 368fa46a9ded07330800000000000000
+      internalID: 3706707519705118819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayersMerge_13
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 6
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cef1547f6a483a590800000000000000
+      internalID: -7664136288206512148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayersMerge_14
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 6
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2c41aef5b19bc300800000000000000
+      internalID: 273472413233138733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayersMerge_15
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 6
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79c8593c807407ac0800000000000000
+      internalID: -3859506777689846633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayersMerge_16
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 6
+        width: 16
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75d354aa9da51f690800000000000000
+      internalID: -7570169607722025641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayersMerge_17
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 7
+        width: 13
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b80ebbd3e12d70110800000000000000
+      internalID: 1227180450808324235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayersMerge_18
+      rect:
+        serializedVersion: 2
+        x: 738
+        y: 9
+        width: 10
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 840135df9bf0d5760800000000000000
+      internalID: 7448126650234114120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayersMerge_19
+      rect:
+        serializedVersion: 2
+        x: 790
+        y: 10
+        width: 4
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c74d447232c69330800000000000000
+      internalID: 3717372064396298179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayersMerge_20
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 6
+        width: 38
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f667de2fc6e187b0800000000000000
+      internalID: -5223640315254577424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayersMerge_23
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 6
+        width: 38
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 125265fc0abb3fff0800000000000000
+      internalID: -3452875349547743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayersMerge_24
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 6
+        width: 16
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b609290075aa2680800000000000000
+      internalID: -8779022622996756813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayersMerge_1
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 10
+        width: 5
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf5c2cbc72d84d990800000000000000
+      internalID: -7362104288782137861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayersMerge_3
+      rect:
+        serializedVersion: 2
+        x: 885
+        y: 10
+        width: 6
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 207abeb7157006760800000000000000
+      internalID: 7448961830223587074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
