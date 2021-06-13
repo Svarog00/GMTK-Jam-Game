@@ -1,8 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DoorScript : MonoBehaviour
+public class CloseDoorScript : MonoBehaviour
 {
     [SerializeField] private MonoButtonScript _activatorButton;
     [SerializeField] private SlimeType _activatorButtonType;
@@ -22,20 +23,20 @@ public class DoorScript : MonoBehaviour
     {
         if(e.senderType == _activatorButtonType)
         {
-            Debug.Log($"Door opened {_activatorButtonType} & {this.ToString()}");
-            Open();
+            Debug.Log($"Door closed {_activatorButtonType} & {this.ToString()}");
+            Close();
         }
     }
 
-    private void Open()
+    private void Close()
     {
-        _animator.SetTrigger("Opened");
+        _animator.SetTrigger("Closed");
         Invoke("SetActiveFalse", 0.5f);
     }
 
     // Update is called once per frame
     private void SetActiveFalse()
     {
-        _boxCollider.isTrigger = true;
+        _boxCollider.isTrigger = false;
     }
 }

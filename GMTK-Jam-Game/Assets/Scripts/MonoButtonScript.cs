@@ -31,7 +31,7 @@ public class MonoButtonScript : MonoBehaviour
         {
             _animator.SetTrigger("BlueStand");
             _buttonType = SlimeType.Blue;
-            OnButtonActivated?.Invoke(this, new OnButtonActivatedEventArgs { senderType = _buttonType });
+            OnButtonActivated?.Invoke(this, new OnButtonActivatedEventArgs { senderType = _buttonType});
         }
         else if (collision.CompareTag("RedSlime"))
         {

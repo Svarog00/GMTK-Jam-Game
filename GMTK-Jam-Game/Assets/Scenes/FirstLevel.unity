@@ -743,6 +743,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Exit
       objectReference: {fileID: 0}
+    - target: {fileID: 7096103746117800630, guid: 10c530fb3fc37f348b794f1365e2fe72, type: 3}
+      propertyPath: _nextLevel
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7096103746117800631, guid: 10c530fb3fc37f348b794f1365e2fe72, type: 3}
       propertyPath: m_RootOrder
       value: 6

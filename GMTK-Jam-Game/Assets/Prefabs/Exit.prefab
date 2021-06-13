@@ -149,6 +149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26cb09a986fda784397ec37b5581a800, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _nextLevel: 1
   _doorAnimator: {fileID: 7096103745799972164}
   _slimes: []
 --- !u!61 &7096103746117800629
